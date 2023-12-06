@@ -1,0 +1,62 @@
+/*html {*/
+/*  !* This is done so that 1rem = 10px taking into consideration that default font-size of browser is 16px and then from now on I'll use rem as a length unit. *!*/
+/*  font-size: 62.5%;*/
+/*}*/
+
+/** {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+.body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.button {
+    margin-top: "20px";
+    width: "fit-content";
+    display: "flex";
+    justify-content: "space-evenly";
+}
+
+.content {
+    font-family: "Rubik", sans-serif;
+    line-height: 1;
+    color: #555; /* This is our main text color*/
+    font-weight: 400;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+
+
+  .heading {
+    font-size: 3rem/* 48px */;
+    line-height: 1;
+    max-width: 42rem;
+    font-weight: 800;
+    background-clip: text;
+    color:"#ea850c";
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    --tw-gradient-to: #ea580c var(--tw-gradient-to-position);
+  }
+
+  .description{
+    margin-top: 1rem;
+    letter-spacing: 2px;
+    line-height: 1;
+    max-width: 42rem;
+    font-weight: 800;
+    background-clip: text;
+  }
+
+  @media (min-width: 640px) {
+    .heading{
+        font-size: 6rem/* 96px */;
+        line-height: 1;
+    }
+}
+  
