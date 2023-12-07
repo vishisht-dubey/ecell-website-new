@@ -1,0 +1,10 @@
+.cardDiv{
+    display: "flex";
+        justify-content: "center";
+        flex-direction: "column";
+        background-color: "gray";
+        box-shadow: "white";
+        width: "400px";
+        height: "400px";
+        border-radius: "40px";
+}
