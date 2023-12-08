@@ -2,11 +2,16 @@ import Footer from "@/components/Footer";
 import Nav from "@/components/navbar/NavLayout";
 import Head from "next/head";
 import React from "react";
-import styles from "./internship_portal.module.css";
+import styles from "./internship_portal/internship_portal.module.css";
 import { Button } from "react-bootstrap";
-import Testimonials from "../../components/sip_testimonials/siptestimonials";
-import Card from "../../components/carousel/card/card";
+import Testimonials from "../components/sip_testimonials/siptestimonials";
+import Card from "../components/carousel/card/card";
+import { useRouter } from "next/navigation";
 export default function InternshipPortal() {
+  const router = useRouter();
+  const handleRecruiterClick = ()=>{
+
+  }
   return (
     <>
       <Head>
@@ -64,17 +69,20 @@ export default function InternshipPortal() {
                         width: "200px",
                         backgroundColor: "#ea850c",
                       }}
+                      onClick={()=>{router.push("internship_portal/recruiter")}}
+                  
                     >
                       As Recruiter
                     </Button>
                     <Button
-                      style={{
-                        padding: "4px",
-                        marginLeft: "4px",
-                        height: "40px",
-                        width: "200px",
-                        backgroundColor: "#ea850c",
-                      }}
+                     style={{
+                      padding: "4px",
+                      marginRight: "4px",
+                      height: "40px",
+                      width: "200px",
+                      backgroundColor: "#ea850c",
+                    }}
+                    // className={styles.button}
                     >
                       As Student
                     </Button>
@@ -92,7 +100,7 @@ export default function InternshipPortal() {
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <span
-              style={{ fontSize: "48px", fontWeight: "400", marginTop: "40px" }}
+              style={{ fontSize: "48px", fontWeight: "600", marginTop: "40px" }}
             >
               Why Intern At A Startup
             </span>
@@ -104,13 +112,13 @@ export default function InternshipPortal() {
             <Card />
             <Card />
           </div>
-          {/* <div style={{ display: "flex", justifyContent: "center" }}> */}
+          <div style={{ display: "flex",flexDirection:"column", justifyContent: "center",flexWrap:"wrap",alignContent:"center" }}>
             <span
-              style={{ fontSize: "48px", fontWeight: "400", marginTop: "40px" ,textAlign:"center"}}
+              style={{ fontSize: "48px", fontWeight: "600", marginTop: "40px" ,textAlign:"center"}}
             >
              Success of SIP
             </span>
-            <p>
+            <p style={{display:"flex",textAlign:"center",maxWidth:"1200px",fontWeight:"800px",letterSpacing:"2px",backgroundClip:"text",lineHeight:"1rem"}}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum,
               laborum illum! Neque voluptatem itaque, magnam perferendis atque,
               vitae hic debitis porro qui alias aspernatur pariatur, nobis
@@ -119,11 +127,11 @@ export default function InternshipPortal() {
               magnam perferendis atque, vitae hic debitis porro qui alias
               aspernatur pariatur, nobis voluptates at vel deserunt!
             </p>
-          {/* </div> */}
+          </div>
         </section>
 
         <div>
-          {" "}
+ 
           <Testimonials />
         </div>
 

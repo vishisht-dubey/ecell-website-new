@@ -60,6 +60,7 @@ export default function CarouselComponent() {
             role={value.role}
             imgURL={value.imgURL}
             descripiton={value.descripiton}
+            
           />
         );
       })}
